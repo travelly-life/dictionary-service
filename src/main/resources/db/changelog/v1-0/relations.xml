@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet id="1.4" author="KirillYunitsin">
+        <addForeignKeyConstraint baseTableName="region"
+                                 baseColumnNames="country_id"
+                                 constraintName="region_country_id_country_id"
+                                 referencedTableName="country"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="1.5" author="KirillYunitsin">
+        <addForeignKeyConstraint baseTableName="city"
+                                 baseColumnNames="region_id"
+                                 constraintName="city_region_id_region_id"
+                                 referencedTableName="region"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+    <changeSet id="1.6" author="KirillYunitsin">
+        <sqlFile path="db/changelog/postgres.sql"></sqlFile>
+    </changeSet>
+</databaseChangeLog>
