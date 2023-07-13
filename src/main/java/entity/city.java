@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.sql.Timestamp;
 
@@ -18,7 +19,7 @@ public class city {
     @Id
     @Column(name = "id")
     @GeneratedValue
-    private BigInteger id;
+    private Long id;
 
     @Column(name = "region_id")
     @GeneratedValue

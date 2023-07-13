@@ -10,7 +10,7 @@
         </sql>
         <createTable tableName="city">
 
-            <column name="id" type="BIGINT" autoIncrement="true">
+            <column name="id" type="BIGSERIAL" autoIncrement="true">
                 <constraints nullable="false"  primaryKey="true"/>
             </column>
 

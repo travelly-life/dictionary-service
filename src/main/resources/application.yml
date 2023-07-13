@@ -2,7 +2,7 @@ spring:
   application:
     name: dictionary-service
   datasource:
-    url: jdbc:postgresql://localhost:61342/mydatabase
+    url: jdbc:postgresql://localhost:62015/mydatabase
     username: myuser
     password: secret
   jpa:
