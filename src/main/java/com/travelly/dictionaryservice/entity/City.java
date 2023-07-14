@@ -5,9 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigInteger;
-import java.sql.Timestamp;
-
 @Entity
 @Data
 @NoArgsConstructor(force = true)
@@ -21,7 +18,7 @@ public class City {
     private Long id;
 
     @Column(name = "region_id")
-    private Long region_id;
+    private Long regionId;
 
     @Column(name = "name")
     private String name;
