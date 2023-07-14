@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: dictionary-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: admin
+  jpa:
+    database: POSTGRESQL
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+
+  liquibase:
+    enabled: true
+    default-schema: postgres
+    liquibase-schema: public
+    user: postgres
+    password: admin
+    change-log: classpath:db/changelog/changelog.xml
