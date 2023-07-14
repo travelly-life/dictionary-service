@@ -2,9 +2,9 @@ spring:
   application:
     name: dictionary-service
   datasource:
-    url: jdbc:postgresql://localhost:62015/mydatabase
-    username: myuser
-    password: secret
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: admin
   jpa:
     database: POSTGRESQL
     open-in-view: false
@@ -15,6 +15,6 @@ spring:
     enabled: true
     default-schema: postgres
     liquibase-schema: public
-    user: myuser
-    password: secret
+    user: postgres
+    password: admin
     change-log: classpath:db/changelog/changelog.xml
