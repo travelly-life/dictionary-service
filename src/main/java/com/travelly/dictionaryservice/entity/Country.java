@@ -12,12 +12,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "country")
 public class Country {
 
-    //автоинкремент
     @Id
-    @Column(name = "id_auto")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idAuto;
-
     @Column(name = "id")
     private Long id;
 
