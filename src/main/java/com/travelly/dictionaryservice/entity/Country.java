@@ -16,8 +16,12 @@ import java.sql.Timestamp;
 public class Country {
 
     @Id
+//    Это автоинкрементируемый id
+    @Column(name = "id_auto")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id_auto;
+
     @Column(name = "id")
-    @GeneratedValue
     private Long id;
 
     @Column(name = "name")

@@ -11,8 +11,12 @@
 
         <createTable tableName="country">
 
-            <column name="id" type="BIGINT">
+            <column name="id_auto" type="BIGINT" autoIncrement="true">
                 <constraints nullable="false"/>
+            </column>
+
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
             </column>
 
             <column name="name" type="VARCHAR(128)">
