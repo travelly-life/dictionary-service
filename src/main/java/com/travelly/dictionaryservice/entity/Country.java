@@ -5,9 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigInteger;
-import java.sql.Timestamp;
-
 @Entity
 @Data
 @NoArgsConstructor(force = true)
@@ -15,11 +12,11 @@ import java.sql.Timestamp;
 @Table(name = "country")
 public class Country {
 
+    //автоинкремент
     @Id
-//    Это автоинкрементируемый id
     @Column(name = "id_auto")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_auto;
+    private Long idAuto;
 
     @Column(name = "id")
     private Long id;
