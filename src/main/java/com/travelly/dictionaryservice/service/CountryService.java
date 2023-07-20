@@ -18,12 +18,12 @@ public class CountryService {
 
     private final CountryMapper countryMapper;
 
-    public List<Country> getAllCountries(){
+    public List<Country> getAllCountries() {
         return countryRepository.findAll();
     }
 
-    public List<CountryResponseDto> getAllCountriesDto(List<Country> countries){
-        List<CountryResponseDto> countryResponseDtos= new ArrayList<>();
+    public List<CountryResponseDto> getAllCountriesDto(List<Country> countries) {
+        List<CountryResponseDto> countryResponseDtos = new ArrayList<>();
         for (Country country : countries) {
             countryResponseDtos.add(countryMapper.convertToCountryResponseDto(country));
         }
