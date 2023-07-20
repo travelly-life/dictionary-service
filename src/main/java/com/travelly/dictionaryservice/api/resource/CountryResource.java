@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.tags.Tags;
 import jakarta.validation.constraints.NotNull;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 import java.util.UUID;
@@ -34,5 +35,5 @@ public interface CountryResource {
                     description = "Страны не найдены",
                     content = @Content)
     })
-    List<CountryResponseDto> getAllCountries();
+    ResponseEntity<List<CountryResponseDto>> getAllCountries();
 }
