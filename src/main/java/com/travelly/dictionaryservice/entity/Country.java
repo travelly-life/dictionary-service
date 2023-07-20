@@ -14,7 +14,6 @@ public class Country {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue
     private Long id;
 
     @Column(name = "name")

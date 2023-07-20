@@ -14,11 +14,11 @@ public class Region {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "country_id")
-    private Long countryId;
+    private Long country_id;
 
     @Column(name = "name")
     private String name;

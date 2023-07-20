@@ -12,6 +12,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.tags.Tags;
 import jakarta.validation.constraints.NotNull;
 
+import java.util.List;
 import java.util.UUID;
 
 @Tags(value = {
@@ -33,5 +34,5 @@ public interface CountryResource {
                     description = "Страны не найдены",
                     content = @Content)
     })
-    CountryResponseDto getAllCountries();
+    List<CountryResponseDto> getAllCountries();
 }

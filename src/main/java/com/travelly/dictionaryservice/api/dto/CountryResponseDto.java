@@ -17,5 +17,5 @@ public class CountryResponseDto {
     @NotEmpty(message = "country.dto.validate.countryName.isEmpty")
     @Size(min = 2, max = 20, message = "country.dto.validate.nameNumber.size")
     @Schema(example = "Название", description = "Название страны")
-    private String accountNumber;
+    private String name;
 }
