@@ -5,6 +5,7 @@ import com.travelly.dictionaryservice.api.dto.CountryResponseDto;
 import com.travelly.dictionaryservice.entity.Country;
 import com.travelly.dictionaryservice.repository.CountryRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.List;
 @Service
 public class CountryService {
     private final CountryRepository countryRepository;
+
     private final CountryMapper countryMapper;
 
     public List<Country> getAllCountries(){

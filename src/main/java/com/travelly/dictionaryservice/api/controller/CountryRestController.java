@@ -23,7 +23,7 @@ public class CountryRestController implements CountryResource {
         this.countryService = countryService;
     }
 
-    @GetMapping("/")
+    @GetMapping("")
     @Override
     public List<CountryResponseDto> getAllCountries() {
         log.info("get all countries");
