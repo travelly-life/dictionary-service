@@ -1,14 +1,14 @@
 package com.travelly.dictionaryservice.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Data
 @NoArgsConstructor(force = true)
 @AllArgsConstructor
+@Getter
+@Setter
 @Table(name = "region")
 public class Region {
 
@@ -18,9 +18,8 @@ public class Region {
     private Long id;
 
     @Column(name = "country_id")
-    private Long country_id;
+    private Long countryId;
 
     @Column(name = "name")
     private String name;
-
 }

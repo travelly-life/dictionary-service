@@ -21,7 +21,7 @@ public class City {
     private Long id;
 
     @Column(name = "region_id")
-    private Long region_id;
+    private Long regionId;
 
     @Column(name = "name")
     private String name;

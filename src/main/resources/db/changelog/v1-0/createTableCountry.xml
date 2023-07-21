@@ -11,6 +11,7 @@
 
         <createTable tableName="country">
 
+
             <column name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true"/>
             </column>
