@@ -18,7 +18,7 @@ public class Region {
     private Long id;
 
     @Column(name = "country_id")
-    private Long country_id;
+    private Long countryId;
 
     @Column(name = "name")
     private String name;

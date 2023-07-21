@@ -6,8 +6,8 @@ import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-
 @Data
+
 @AllArgsConstructor
 @Schema(description = "Объект для получения стран")
 public class CountryResponseDto {

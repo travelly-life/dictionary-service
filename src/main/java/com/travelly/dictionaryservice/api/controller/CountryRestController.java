@@ -28,7 +28,7 @@ public class CountryRestController implements CountryResource {
     @Override
     public ResponseEntity<List<CountryResponseDto>> getAllCountries() {
         log.info("get all countries");
-        List<CountryResponseDto> countryResponseDtos = countryService.getAllCountriesDto(countryService.getAllCountries());
+        final List<CountryResponseDto> countryResponseDtos = countryService.getAllCountriesDto(countryService.getAllCountries());
         return ResponseEntity.ok(countryResponseDtos);
     }
 }

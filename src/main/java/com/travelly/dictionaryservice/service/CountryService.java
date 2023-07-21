@@ -5,7 +5,6 @@ import com.travelly.dictionaryservice.api.dto.CountryResponseDto;
 import com.travelly.dictionaryservice.entity.Country;
 import com.travelly.dictionaryservice.repository.CountryRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -23,7 +22,7 @@ public class CountryService {
     }
 
     public List<CountryResponseDto> getAllCountriesDto(List<Country> countries) {
-        List<CountryResponseDto> countryResponseDtos = new ArrayList<>();
+        final List<CountryResponseDto> countryResponseDtos = new ArrayList<>();
         for (Country country : countries) {
             countryResponseDtos.add(countryMapper.convertToCountryResponseDto(country));
         }
