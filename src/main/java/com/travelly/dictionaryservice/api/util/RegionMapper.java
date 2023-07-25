@@ -2,7 +2,6 @@ package com.travelly.dictionaryservice.api.util;
 
 import com.travelly.dictionaryservice.api.dto.RegionDto;
 import com.travelly.dictionaryservice.entity.Region;
-import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -17,11 +16,12 @@ public class RegionMapper {
     public RegionDto convertToDto(Region regionEntity) {
         return modelMapper.map(regionEntity, RegionDto.class);
     }
+
     public List<RegionDto> convertListToDto(List<Region> regionList) {
-        List<RegionDto> resListDto = new ArrayList<>();
-        for(int i = 0; i < regionList.size(); i++) {
-            Region regionOneList = regionList.get(i);
-            RegionDto regionDto = convertToDto(regionOneList);
+        final List<RegionDto> resListDto = new ArrayList<>();
+        for (int i = 0; i < regionList.size(); i++) {
+            final Region regionOneList = regionList.get(i);
+            final RegionDto regionDto = convertToDto(regionOneList);
             resListDto.add(regionDto);
         }
         return resListDto;

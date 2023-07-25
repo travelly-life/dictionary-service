@@ -17,10 +17,11 @@ import java.util.List;
 public class GetRegionService {
     private final RegionMapper regionMapper;
     private final RegionRepos regionRepos;
+
     @Transactional
     public List<RegionDto> getRegions(Long countryId) {
-        List<Region> regionsEntity = regionRepos.findAllByCountryId(countryId);
-        List<RegionDto> regionsDto = regionMapper.convertListToDto(regionsEntity);
+        final List<Region> regionsEntity = regionRepos.findAllByCountryId(countryId);
+        final List<RegionDto> regionsDto = regionMapper.convertListToDto(regionsEntity);
         return regionsDto;
     }
 }
