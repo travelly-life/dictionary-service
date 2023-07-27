@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Tags(
         value = {
-                @Tag(name = "Отзыв", description = "Контроллер для вывода списка формата JSON регионов по countryId")
+                @Tag(name = "Получение списка регионов", description = "Контроллер для вывода списка формата JSON регионов по countryId")
         }
 )
 @RequestMapping(UrlConstants.DIC_SERV_URL)
