@@ -19,9 +19,11 @@ public class GetRegionService {
     private final RegionRepos regionRepos;
 
     @Transactional
+
     public List<RegionDto> getRegions(Long countryId) {
         final List<Region> regionsEntity = regionRepos.findAllByCountryId(countryId);
         final List<RegionDto> regionsDto = regionMapper.convertListToDto(regionsEntity);
+        log.info("List of regions was found and convert to DTO");
         return regionsDto;
     }
 }

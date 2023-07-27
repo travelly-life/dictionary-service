@@ -15,7 +15,7 @@ public class RegionDto {
     @Schema(description = "Идентификатор региона")
     private Long id;
     @NonNull
-    @Schema(description = "Название страны")
+    @Schema(description = "Название региона")
     private String name;
 
 }
