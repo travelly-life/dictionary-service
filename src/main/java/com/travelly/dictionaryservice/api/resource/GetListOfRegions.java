@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
                 @Tag(name = "Получение списка регионов", description = "Контроллер для вывода списка формата JSON регионов по countryId")
         }
 )
-@RequestMapping(UrlConstants.DIC_SERV_URL)
+@RequestMapping(UrlConstants.DICT_BASE_URL)
 public interface GetListOfRegions {
     @GetMapping("/{countryId}/region")
     @Operation(summary = "Отображение списка регионов")

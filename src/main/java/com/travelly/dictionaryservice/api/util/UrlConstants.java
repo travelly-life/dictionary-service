@@ -4,5 +4,5 @@ import lombok.experimental.UtilityClass;
 
 @UtilityClass
 public class UrlConstants {
-    public static final String DIC_SERV_URL = "/dictionary";
+    public static final String DICT_BASE_URL = "/dictionary";
 }

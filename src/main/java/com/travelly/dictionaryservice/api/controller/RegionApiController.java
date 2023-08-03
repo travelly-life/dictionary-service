@@ -18,13 +18,13 @@ import java.util.List;
 @Slf4j
 @RestController
 @AllArgsConstructor
-@RequestMapping(UrlConstants.DIC_SERV_URL)
+@RequestMapping(UrlConstants.DICT_BASE_URL)
 public class RegionApiController implements GetListOfRegions {
 
     private final GetRegionService getRegionService;
 
     @Override
-    public ResponseEntity<?> getRegions(@PathVariable Long countryId) {
+    public ResponseEntity getRegions(@PathVariable Long countryId) {
         if (countryId <= 217) {
             final List<RegionDto> listOfDto = getRegionService.getRegions(countryId);
             log.info("Correct request");
