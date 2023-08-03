@@ -17,33 +17,30 @@ import java.util.List;
 @AllArgsConstructor
 @Slf4j
 public class GetRegionService implements MapperRegion, MapperRegionList {
-//    private final RegionMapper regionMapper;
+    //    private final RegionMapper regionMapper;
     private final RegionRepos regionRepos;
     private final List<RegionDto> resListDto = new ArrayList<>();
 
 
     @Transactional
     public List<RegionDto> getRegions(Long countryId) {
-
         final List<Region> regionsEntity = regionRepos.findAllByCountryId(countryId);
-        log.info("regionsEntity value is: {}", regionsEntity );
-        final List<RegionDto> regionsDto = toListDto(regionsEntity);
-        log.info("regionsDto value is: {}", regionsDto );
-//        log.info("List of regions was found and convert to DTO");
-        return regionsDto;
+        log.info("regionsEntity value is: {}", regionsEntity);
+        return toListDto(regionsEntity);
     }
 
     @Override
     public RegionDto toDto(Region regionEntity) {
-        RegionDto regionDto = new RegionDto();
-        return regionDto;
+        return regionEntity;
     }
 
     @Override
     public List<RegionDto> toListDto(List<Region> regionList) {
-        for (final Region regionOneList : regionList) {
-            resListDto.add(toDto(regionOneList));
-        }
+        regionList.forEach (region -> {
+            RegionDto regionDto = toDto(region);
+            log.info("regionDto value is: {}", regionDto);
+            resListDto.add(regionDto);
+        });
         return resListDto;
     }
 }
