@@ -17,10 +17,9 @@ import java.util.List;
 @AllArgsConstructor
 @Slf4j
 public class GetRegionService implements MapperRegion, MapperRegionList {
-    //    private final RegionMapper regionMapper;
+
     private final RegionRepos regionRepos;
     private final List<RegionDto> resListDto = new ArrayList<>();
-
 
     @Transactional
     public List<RegionDto> getRegions(Long countryId) {
@@ -37,8 +36,8 @@ public class GetRegionService implements MapperRegion, MapperRegionList {
     @Override
     public List<RegionDto> toListDto(List<Region> regionList) {
         resListDto.clear();
-        regionList.forEach (region -> {
-            RegionDto regionDto = MapperRegion.INSTANCE.toDto(region);
+        regionList.forEach(region -> {
+            final RegionDto regionDto = MapperRegion.INSTANCE.toDto(region);
             log.info("regionDto value is: {}", regionDto);
             resListDto.add(regionDto);
         });

@@ -8,5 +8,6 @@ import org.mapstruct.factory.Mappers;
 @Mapper(componentModel = "spring")
 public interface MapperRegion {
     MapperRegion INSTANCE = Mappers.getMapper(MapperRegion.class);
+
     RegionDto toDto(Region regionEntity);
 }
