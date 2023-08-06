@@ -1,14 +1,13 @@
 package com.travelly.dictionaryservice.api.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 
 @Data
 @NoArgsConstructor(force = true)
 @AllArgsConstructor
+@Getter
+@Setter
 @Schema(description = "Объект для отображения списка регионов")
 public class RegionDto {
     @NonNull

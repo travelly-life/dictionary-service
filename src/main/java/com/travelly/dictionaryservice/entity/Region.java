@@ -1,16 +1,19 @@
 package com.travelly.dictionaryservice.entity;
 
+import com.travelly.dictionaryservice.api.dto.RegionDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
-@Data
 @NoArgsConstructor(force = true)
 @AllArgsConstructor
+@Getter
+@Setter
 @Table(name = "region")
-public class Region {
+public class Region extends RegionDto {
 
     @Id
     @Column(name = "id")
