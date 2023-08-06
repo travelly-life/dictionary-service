@@ -6,7 +6,7 @@ import org.mapstruct.Mapper;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring", uses = MapperRegion.class)
+@Mapper(componentModel = "spring")
 public interface MapperRegionList {
     List<RegionDto> toListDto(List<Region> regionList);
 }

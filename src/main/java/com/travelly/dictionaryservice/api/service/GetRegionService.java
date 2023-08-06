@@ -36,11 +36,13 @@ public class GetRegionService implements MapperRegion, MapperRegionList {
 
     @Override
     public List<RegionDto> toListDto(List<Region> regionList) {
+        resListDto.clear();
         regionList.forEach (region -> {
-            RegionDto regionDto = toDto(region);
+            RegionDto regionDto = MapperRegion.INSTANCE.toDto(region);
             log.info("regionDto value is: {}", regionDto);
             resListDto.add(regionDto);
         });
+        log.info("resListDto value is: {}", resListDto);
         return resListDto;
     }
 }
