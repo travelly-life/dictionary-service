@@ -1,6 +1,5 @@
 package com.travelly.dictionaryservice.entity;
 
-import com.travelly.dictionaryservice.api.dto.RegionDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
