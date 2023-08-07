@@ -13,7 +13,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "region")
-public class Region extends RegionDto {
+public class Region {
 
     @Id
     @Column(name = "id")

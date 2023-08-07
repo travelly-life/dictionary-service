@@ -3,7 +3,6 @@ package com.travelly.dictionaryservice.api.service;
 import com.travelly.dictionaryservice.api.dto.RegionDto;
 import com.travelly.dictionaryservice.api.repository.RegionRepos;
 import com.travelly.dictionaryservice.api.util.mapper.MapperRegion;
-import com.travelly.dictionaryservice.api.util.mapper.MapperRegionList;
 import com.travelly.dictionaryservice.entity.Region;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +15,7 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 @Slf4j
-public class GetRegionService implements MapperRegion, MapperRegionList {
+public class GetRegionService {
 
     private final RegionRepos regionRepos;
     private final List<RegionDto> resListDto = new ArrayList<>();
@@ -28,12 +27,6 @@ public class GetRegionService implements MapperRegion, MapperRegionList {
         return toListDto(regionsEntity);
     }
 
-    @Override
-    public RegionDto toDto(Region regionEntity) {
-        return regionEntity;
-    }
-
-    @Override
     public List<RegionDto> toListDto(List<Region> regionList) {
         resListDto.clear();
         regionList.forEach(region -> {

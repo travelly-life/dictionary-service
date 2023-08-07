@@ -10,4 +10,5 @@ public interface MapperRegion {
     MapperRegion INSTANCE = Mappers.getMapper(MapperRegion.class);
 
     RegionDto toDto(Region regionEntity);
+
 }

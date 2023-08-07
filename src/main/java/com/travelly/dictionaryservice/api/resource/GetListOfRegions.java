@@ -30,5 +30,5 @@ public interface GetListOfRegions {
                     content = @Content),
             @ApiResponse(responseCode = "404", description = "Региона с таким идентификатором не найдено",
                     content = @Content)})
-    ResponseEntity<?> getRegions(@PathVariable("countryId") Long countryId);
+    ResponseEntity getRegions(@PathVariable("countryId") Long id);
 }
