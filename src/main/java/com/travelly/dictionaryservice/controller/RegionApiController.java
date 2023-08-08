@@ -1,7 +1,7 @@
-package com.travelly.dictionaryservice.api.controller;
+package com.travelly.dictionaryservice.controller;
 
 import com.travelly.dictionaryservice.api.dto.RegionDto;
-import com.travelly.dictionaryservice.api.resource.GetListOfRegions;
+import com.travelly.dictionaryservice.api.resources.GetListOfRegions;
 import com.travelly.dictionaryservice.api.service.GetRegionService;
 import com.travelly.dictionaryservice.api.util.UrlConstants;
 import lombok.AllArgsConstructor;

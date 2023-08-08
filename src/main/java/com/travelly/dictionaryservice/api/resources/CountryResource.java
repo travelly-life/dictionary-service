@@ -1,4 +1,4 @@
-package com.travelly.dictionaryservice.api.resource;
+package com.travelly.dictionaryservice.api.resources;
 
 import com.travelly.dictionaryservice.api.dto.CountryResponseDto;
 import io.swagger.v3.oas.annotations.Operation;
@@ -13,11 +13,11 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 
 @Tags(value = {
-        @Tag(name = "Ресурс для стран",
-                description = "Описание ресурса для стран")})
+        @Tag(name = "Получение списка стран",
+                description = "Контроллер для вывода списка всех стран")})
 
 public interface CountryResource {
-    @Operation(summary = "Получение списка стран")
+    @Operation(summary = "Получение списка всех стран")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200",
                     description = "Страны найдены",

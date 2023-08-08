@@ -1,7 +1,7 @@
 package com.travelly.dictionaryservice.service;
 
-import com.travelly.dictionaryservice.api.config.CountryMapper;
 import com.travelly.dictionaryservice.api.dto.CountryResponseDto;
+import com.travelly.dictionaryservice.api.util.CountryMapper;
 import com.travelly.dictionaryservice.entity.Country;
 import com.travelly.dictionaryservice.repository.CountryRepository;
 import lombok.AllArgsConstructor;
@@ -24,7 +24,7 @@ public class CountryService {
     public List<CountryResponseDto> getAllCountriesDto(List<Country> countries) {
         final List<CountryResponseDto> countryResponseDtos = new ArrayList<>();
         for (Country country : countries) {
-            countryResponseDtos.add(countryMapper.convertToCountryResponseDto(country));
+            countryResponseDtos.add(countryMapper.toDTO(country));
         }
         return countryResponseDtos;
     }
