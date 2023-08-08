@@ -24,7 +24,7 @@ public class CountryService {
     public List<CountryResponseDto> getAllCountriesDto(List<Country> countries) {
         final List<CountryResponseDto> countryResponseDtos = new ArrayList<>();
         for (Country country : countries) {
-            countryResponseDtos.add(countryMapper.toDTO(country));
+            countryResponseDtos.add(countryMapper.toDto(country));
         }
         return countryResponseDtos;
     }

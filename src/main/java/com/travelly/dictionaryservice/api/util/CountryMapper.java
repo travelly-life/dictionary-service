@@ -7,5 +7,5 @@ import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface CountryMapper {
-    CountryResponseDto toDTO(Country country);
+    CountryResponseDto toDto(Country country);
 }
