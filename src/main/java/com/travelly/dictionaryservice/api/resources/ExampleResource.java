@@ -1,4 +1,4 @@
-package com.travelly.dictionaryservice.api.resource;
+package com.travelly.dictionaryservice.api.resources;
 
 import com.travelly.dictionaryservice.api.dto.ExampleDto;
 import io.swagger.v3.oas.annotations.Operation;
