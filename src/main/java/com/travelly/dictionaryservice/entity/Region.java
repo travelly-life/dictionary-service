@@ -2,13 +2,15 @@ package com.travelly.dictionaryservice.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
-@Data
 @NoArgsConstructor(force = true)
 @AllArgsConstructor
+@Getter
+@Setter
 @Table(name = "region")
 public class Region {
 

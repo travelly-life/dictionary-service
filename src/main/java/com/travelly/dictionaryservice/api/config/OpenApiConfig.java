@@ -7,9 +7,9 @@ import io.swagger.v3.oas.annotations.info.Info;
 @OpenAPIDefinition(
         info = @Info(
                 title = "Dictionary-service",
-                description = "Справочник", version = "1.0.0",
+                description = "Справочник", version = "1.0.1",
                 contact = @Contact(
-                        name = "Maksimova Anna"
+                        name = "Kirill Yunitsyn"
                 )
         )
 )
