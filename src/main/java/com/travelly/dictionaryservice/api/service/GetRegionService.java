@@ -18,7 +18,7 @@ import java.util.List;
 public class GetRegionService {
 
     private final RegionRepos regionRepos;
-    private final List<RegionDto> resListDto = new ArrayList<>();
+    private final MapperRegion mapperRegion;
 
     @Transactional
     public List<RegionDto> getRegions(Long countryId) {
@@ -28,9 +28,9 @@ public class GetRegionService {
     }
 
     public List<RegionDto> toListDto(List<Region> regionList) {
-        resListDto.clear();
+        final List<RegionDto> resListDto = new ArrayList<>();
         regionList.forEach(region -> {
-            final RegionDto regionDto = MapperRegion.INSTANCE.toDto(region);
+            final RegionDto regionDto = mapperRegion.toDto(region);
             log.info("regionDto value is: {}", regionDto);
             resListDto.add(regionDto);
         });
